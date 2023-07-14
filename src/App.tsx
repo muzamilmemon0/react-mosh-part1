@@ -21,7 +21,7 @@ function App() {
           hello <span>world!</span>
         </Alert>
       )}
-      <Button color="success" onClick={() => setAlertVisibility(true)}>
+      <Button color="primary" onClick={() => setAlertVisibility(true)}>
         My Button
       </Button>
     </>
