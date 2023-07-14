@@ -2,6 +2,7 @@ import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import { useState } from "react";
+import { BsFillCalendarFill } from "react-icons/bs";
 
 function App() {
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
@@ -24,6 +25,7 @@ function App() {
       <Button color="success" onClick={() => setAlertVisibility(true)}>
         My Button
       </Button>
+      <BsFillCalendarFill size="40" color="red" />
     </>
   );
 }
