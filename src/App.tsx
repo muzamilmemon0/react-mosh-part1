@@ -7,9 +7,12 @@ import Like from "./components/Like";
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
 
-  const [drink, setDrink] = useState({
-    title: "Americano",
-    price: 5,
+  const [customer, setCustomer] = useState({
+    name: "John",
+    address: {
+      city: "San Francisco",
+      zipCode: 94111,
+    },
   });
 
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
@@ -19,7 +22,10 @@ function App() {
   };
 
   const handleClick = () => {
-    setDrink({ ...drink, price: 6 });
+    setCustomer({
+      ...customer,
+      address: { ...customer.address, zipCode: 94112 },
+    });
   };
 
   return (
@@ -43,7 +49,7 @@ function App() {
         My Button
       </Button>
       <Like onClick={() => console.log("clicked")} />
-      {drink.price}
+      {customer.address.city} {customer.address.zipCode}
       <button onClick={handleClick} type="submit">
         Click me
       </button>
